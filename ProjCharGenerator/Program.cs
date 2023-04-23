@@ -4,7 +4,7 @@ using System.IO;
 
 namespace generator
 {
-    class CharGen
+    public class CharGen
     {
         private string syms = "абвгдеёжзийклмнопрстуфхцчшщьыъэюя"; 
         private char[] data;
@@ -20,15 +20,15 @@ namespace generator
            return data[random.Next(0, size)]; 
         }
     }
-    class BiCharGen
+    public class BiCharGen
     {
         private string syms = "абвгдежзийклмнопрстуфхцчшщьыэюя"; 
         private string[] data = new string[31*31];
         private int size;
         private Random random;
-        int sumOfWeights;
-        int[] sumOfWeightsBefore;
-        int[] weights = new int[31 * 31]  {
+        private int sumOfWeights;
+        private int[] sumOfWeightsBefore;
+        private int[] weights = new int[31 * 31]  {
             2, 12, 35, 8, 14, 7, 6, 15, 7, 7, 19, 27, 19, 45, 5, 11, 26, 31, 27, 3, 1, 10, 6, 7, 10, 1, 0, 0, 2, 6, 9,
             5, 0, 0, 0, 0, 9, 1, 0, 6, 0, 0, 6, 0, 2, 21, 0, 8, 1, 0, 6, 0, 0, 0, 0, 0, 1, 11, 0, 0, 0, 2,
             35, 1, 5, 3, 3, 32, 0, 2, 17, 0, 7, 10, 3, 9, 58, 6, 6, 19, 6, 7, 0, 1, 1, 2, 4, 1, 18, 1, 2, 0, 3,
@@ -91,7 +91,7 @@ namespace generator
             return data[--i]; 
         }
     }
-    class BiWordGen
+    public class BiWordGen
     {
         private string[] data = new string[100]
         {
@@ -109,9 +109,9 @@ namespace generator
         };
         private int size;
         private Random random;
-        int sumOfWeights;
-        int[] sumOfWeightsBefore;
-        int[] weights = new int[100]
+        private int sumOfWeights;
+        private int[] sumOfWeightsBefore;
+        private int[] weights = new int[100]
         {
             2013, 1939, 1174, 1137, 971, 960, 952, 927, 927, 898, 864, 848, 829, 803, 802, 778, 756, 743, 718,
             716, 710, 687, 686, 672, 669, 662, 659, 600, 583, 579, 568, 529, 506, 502, 495, 492, 492, 491, 488,
@@ -145,7 +145,7 @@ namespace generator
             return data[--i]; 
         }
     }
-    class WordGen
+    public class WordGen
     {
         private string[] data = new string[100]
         {
@@ -161,9 +161,9 @@ namespace generator
         };
         private int size;
         private Random random;
-        int sumOfWeights;
-        int[] sumOfWeightsBefore;
-        int[] weights = new int[100]
+        private int sumOfWeights;
+        private int[] sumOfWeightsBefore;
+        private int[] weights = new int[100]
         {
             7416, 5842, 3385, 2936, 2228, 2210, 1592, 1541, 1377, 1300, 1132, 1071, 1048, 983,
             957, 836, 817, 798, 754, 747, 695, 685, 665, 663, 600, 592, 553, 516, 501, 485, 449,

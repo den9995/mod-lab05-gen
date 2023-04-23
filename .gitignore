@@ -1,4 +1,6 @@
 ProjCharGenerator/run.sh
 ProjCharGenerator/bin/
 ProjCharGenerator/obj/
+tests/bin/
+tests/obj/
 
